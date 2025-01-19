@@ -1,11 +1,12 @@
 package api
 
 import (
-	"base-code-api/internal/domain"
-	"base-code-api/internal/middleware"
-	"base-code-api/internal/model"
-	"base-code-api/internal/service"
+	"base-code-api/app/domain"
+	"base-code-api/app/middleware"
+	"base-code-api/app/model"
+	"base-code-api/app/service"
 	"net/http"
+	"os"
 
 	"github.com/gin-gonic/gin"
 )
@@ -15,6 +16,7 @@ var userService = service.NewUserService()
 
 func StartServer() {
 	r := gin.Default()
+	APP_PORT := os.Getenv("APP_PORT")
 
 	r.Use(middleware.AuthMiddleware())
 
@@ -66,5 +68,5 @@ func StartServer() {
 		c.JSON(http.StatusOK, gin.H{"message": "Barang deleted"})
 	})
 
-	r.Run(":8080")
+	r.Run(":" + APP_PORT)
 }

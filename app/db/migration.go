@@ -1,11 +1,11 @@
-// internal/db/migration.go
+// app/db/migration.go
 package db
 
 import (
 	"log"
 	"os"
 
-	"base-code-api/internal/model"
+	"base-code-api/app/model"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"

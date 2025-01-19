@@ -1,8 +1,8 @@
 package main
 
 import (
-	"base-code-api/internal/api"
-	"base-code-api/internal/db"
+	"base-code-api/app/api"
+	"base-code-api/app/db"
 )
 
 func main() {

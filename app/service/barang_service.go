@@ -1,8 +1,8 @@
 package service
 
 import (
-	"base-code-api/internal/domain"
-	"base-code-api/internal/model"
+	"base-code-api/app/domain"
+	"base-code-api/app/model"
 )
 
 type BarangService struct {
